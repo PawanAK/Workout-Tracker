@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+// pages & components
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import "./index.css";
 
-const App = () => {
+function App() {
   return (
     <div className="App">
       <BrowserRouter>
@@ -16,6 +18,6 @@ const App = () => {
       </BrowserRouter>
     </div>
   );
-};
+}
 
 export default App;
