@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const WorkoutDetails = ({ workout }) => {
   return (
     <div className="workout-details">
@@ -13,6 +15,14 @@ const WorkoutDetails = ({ workout }) => {
       <p>{workout.createdAt}</p>
     </div>
   );
+};
+WorkoutDetails.propTypes = {
+  workout: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    load: PropTypes.number.isRequired,
+    reps: PropTypes.number.isRequired,
+    createdAt: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default WorkoutDetails;
