@@ -11,6 +11,10 @@ const Home = () => {
     const fetchWorkouts = async () => {
       const response = await fetch("/api/workouts");
       const data = await response.json();
+
+      if (response.ok) {
+        dispatcher({ type: "SET_WORKOUTS", payload: data });
+      }
     };
 
     fetchWorkouts();
