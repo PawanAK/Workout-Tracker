@@ -11,3 +11,6 @@ const loginUser = async (req, res) => {
 const signupUser = async (req, res) => {
     res.json({ mssg: 'Signup successful' })
 }
+
+
+module.exports = {signupUser, loginUser}
